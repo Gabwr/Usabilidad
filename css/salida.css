@@ -1,0 +1,11 @@
+/* CSS Document */
+
+#salida {
+	width: 400px;
+    margin: 20px auto; /* Añade margen arriba del área de salida */
+    border: 1px solid #ccc; /* Borde sólido ligero */
+    padding: 10px; /* Relleno dentro del área de salida */
+    min-height: 100px; /* Altura mínima */
+    background-color: #f9f9f9; /* Color de fondo claro */
+    overflow-wrap: break-word;/* Asegura que el texto largo se rompa y no desborde el contenedor */
+}
