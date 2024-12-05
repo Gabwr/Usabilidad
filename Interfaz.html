@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../Usabilidad/css/Font.css">
   <link rel="stylesheet" href="../Usabilidad/css/BtnSmall.css">
   <link rel="stylesheet" href="../Usabilidad/css/encima.css">
+	<link rel="stylesheet" href="../Usabilidad/css/BtnCambioFont.css">
   <link rel="stylesheet" href="css/salida.css">
 </head>
 <body style="background-color:rgba(226,215,167,0.50);margin: 60px;">
@@ -75,11 +76,15 @@
   
   <p>
     <!-- Modal y Overlay -->
+
   </p>
   <div id="overlay" onclick="closeModal()"></div>
-	<div id="modal">
-	  <p class="Comic">¡Aquí puedes realizar otras funciones!</p>
-	  <img src="../Usabilidad/img/For.png" alt="no hay">
+	<div id="modal" >
+	  <p class="Comic">¡Plantillas para tu carta!!!!</p>
+		<p> tipos de Letra!!! <button class="butn" id="arial">
+              			<img src="../Usabilidad/img/Arial.png" alt="Boton" onClick="changeTextArial()">
+            		</button></p>
+	  <p id="textoModal" class="Comic"></p> 
 	  <button class="btn" onclick="closeModal()">Cerrar</button>
 	</div>
 

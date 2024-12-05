@@ -1,0 +1,30 @@
+@charset "utf-8";
+ display: block;
+      background-color: lightgray;
+      padding: 20px;
+      border: 2px solid black;
+      width: 300px;
+      margin: 100px auto;
+    }
+    .Arial {
+      font-family: "Arial", cursive;
+    }
+    .butn {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+	  width: 80px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .butn img {
+      width: 60px;
+      border-radius: 3px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .butn:hover img {
+      transform: scale(1.2);
+      filter: brightness(1.2);
+	}
+
