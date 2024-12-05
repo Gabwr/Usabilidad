@@ -68,3 +68,13 @@ function decir(texto){
 	mensaje.volume = 1;
 	speechSynthesis.speak(mensaje);
 }
+function validarModal(){
+	var mensaje_carta=document.getElementById("salida").innerText;
+	if(mensaje_carta=="" || mensaje_carta=="Tu texto esta aqui")
+		{
+			carta_vacia.play();
+		}
+	else{
+		openModal();
+	}
+}
