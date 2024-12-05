@@ -2,9 +2,9 @@
 var abre_plantillas=document.getElementById("transicion_plantillas");
 var carta_vacia=document.getElementById("alerta_cartavacia");
 function openModal() {
+    abre_plantillas.play();
     document.getElementById('modal').style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
-
     const textoSalida = document.getElementById('salida').innerHTML;//muestra el texto de salida en el overlay
     document.getElementById('textoModal').innerHTML = textoSalida;
 }
