@@ -12,13 +12,17 @@ function closeModal() {
 }
 
     function changeTextArial() {
-            const textoModal = document.getElementById('textoModal');
-      
-      textoModal.style.fontFamily = textoModal.style.fontFamily === 'Arial, sans-serif'
-        ? "'Comic Sans MS', cursive"
-        : "Arial, sans-serif";
+      const textoModal = document.getElementById('textoModal');
+      textoModal.style.fontFamily =  'Arial, sans-serif';
     }
-
+	function changeTextFantasy() {
+      const textoModal = document.getElementById('textoModal');
+      textoModal.style.fontFamily =  'Fantasy';
+    }
+	function changeTextTimesN() {
+      const textoModal = document.getElementById('textoModal');
+      textoModal.style.fontFamily =  'Times New Roman';
+    }
 //Funciones de toma de microfono
 var botonMic = document.getElementById("mic");
 var salida = document.getElementById("salida");
@@ -44,7 +48,7 @@ recognition.onresult = function (event) {
 	const result = event.results[0][0].transcript;
 	const notaDiv = document.createElement("salida");
 	notaDiv.textContent = result;
-	salida.append(notaDivc);
+	salida.append(notaDiv);
 };
 
 
