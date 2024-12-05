@@ -23,6 +23,8 @@ function closeModal() {
 var botonMic = document.getElementById("mic");
 var salida = document.getElementById("salida");
 
+const hablar = document.getElementById("hear");
+
 let recognition;
 recognition = new webkitSpeechRecognition();
 recognition.lang = "es-ES";
@@ -50,3 +52,15 @@ recognition.onresult = function (event) {
 botonMic.addEventListener("click", function(){
 	recognition.start();
 });
+
+hablar.addEventListener("click", ()=>{
+	decir(document.getElementById("salida").innerText);
+});
+
+function decir(texto){
+	var mensaje = new SpeechSynthesisUtterance(texto);
+	const voces = window.speechSynthesis.getVoices();
+	
+	mensaje.volume = 1;
+	speechSynthesis.speak(mensaje);
+}
