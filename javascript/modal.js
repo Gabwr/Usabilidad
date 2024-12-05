@@ -1,3 +1,6 @@
+//Variables de audio
+var abre_plantillas=document.getElementById("transicion_plantillas");
+var carta_vacia=document.getElementById("alerta_cartavacia");
 function openModal() {
     document.getElementById('modal').style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
