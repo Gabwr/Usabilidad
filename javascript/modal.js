@@ -1,10 +1,12 @@
 //Variables de audio
 var abre_plantillas=document.getElementById("transicion_plantillas");
 var carta_vacia=document.getElementById("alerta_cartavacia");
+
 function openModal() {
     abre_plantillas.play();
     document.getElementById('modal').style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
+	document.getElementById('carta').style.display='block';
     const textoSalida = document.getElementById('salida').innerHTML;//muestra el texto de salida en el overlay
     document.getElementById('textoModal').innerHTML = textoSalida;
 }
@@ -12,6 +14,7 @@ function openModal() {
 function closeModal() {
   document.getElementById('modal').style.display = 'none';
   document.getElementById('overlay').style.display = 'none';
+	document.getElementById('carta').style.display = 'none';
 }
 
     function changeTextArial() {
@@ -37,7 +40,7 @@ recognition = new webkitSpeechRecognition();
 recognition.lang = "es-ES";
 
 const salidas = document.getElementById('salida');
-salidas.innerHTML = 'Tu texto esta aqui';
+salidas.innerHTML = 'Tu texto va aqui';
 
 //funcion mostar en el div texto incial
 function mostrarTexto() {
@@ -71,6 +74,7 @@ function decir(texto){
 	mensaje.volume = 1;
 	speechSynthesis.speak(mensaje);
 }
+
 function validarModal(){
 	var mensaje_carta=document.getElementById("salida").innerText;
 	if(mensaje_carta=="" || mensaje_carta=="Tu texto esta aqui")
