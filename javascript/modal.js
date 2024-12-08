@@ -14,7 +14,7 @@ function openModal() {
 function closeModal() {
   document.getElementById('modal').style.display = 'none';
   document.getElementById('overlay').style.display = 'none';
-	document.getElementById('carta').style.display = 'none';
+  document.getElementById('carta').style.display = 'none';
 }
 
     function changeTextArial() {
