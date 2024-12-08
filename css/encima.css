@@ -1,7 +1,9 @@
 @charset "utf-8";
+.hid {
+  display: none !important;
+}
 
 #overlay {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,11 +14,10 @@
 }
 
 #modal {
-  display: none;
   position: fixed;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 40%;
+  transform: translate(-45%, -50%);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
   z-index: 1000;
@@ -24,20 +25,38 @@
   background-color: rgba(79,171,237,0.58);
   height: 80%;
   width: 60%;
-  display: flex; 
   flex-direction: column; 
   align-items: center; 
   justify-content: center;
 }
+#plantillas {
+  position: fixed;
+  top: 50%;
+  right: 0%;
+  transform: translate(0, -50%); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+  text-align: center;
+  background-color: rgba(79,171,237,0.58);
+  height: 90%;
+  width: 20%;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+
+}
 
 #carta {
-  display: none;
   width: 60%;
   height: 70%;
   z-index: 999;
   background-color: rgba(255,255,255,1.00);
+  background-image: url("../img/CartaModel1.png");
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  display: flex;
   justify-content: center; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }

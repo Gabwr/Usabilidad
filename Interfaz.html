@@ -1,14 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../Usabilidad/css/Boton.css">
-  <link rel="stylesheet" href="../Usabilidad/css/Font.css">
-  <link rel="stylesheet" href="../Usabilidad/css/BtnSmall.css">
-  <link rel="stylesheet" href="../Usabilidad/css/encima.css">
-	<link rel="stylesheet" href="../Usabilidad/css/BtnCambioFont.css">
-  <link rel="stylesheet" href="css/salida.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../Usabilidad/css/Boton.css">
+		<link rel="stylesheet" href="../Usabilidad/css/Font.css">
+		<link rel="stylesheet" href="../Usabilidad/css/BtnSmall.css">
+		<link rel="stylesheet" href="../Usabilidad/css/encima.css">
+		<link rel="stylesheet" href="../Usabilidad/css/BtnCambioFont.css">
+		<link rel="stylesheet" href="css/salida.css">
+		<link rel="stylesheet" href="../Usabilidad/css/BtnPlantillas.css">
 </head>
 <body style="background-color:rgba(226,215,167,0.50);margin: 60px;">
 <!-- Elementos de audio -->
@@ -36,8 +37,8 @@
 						<img src="../Usabilidad/img/Mom.png" alt="BtnM">
 				  </button>
           		</p>
-         	 	<p class="Comic">
-            		<div id="salida"></div>
+         	 	<p >
+            		<div id="salida" style="font-family: Arial;font-size: 30px"></div>
           		</p>
 		        <p>
 					<div class="indicator">
@@ -72,8 +73,8 @@
       <tr>
         <td>&nbsp;</td>
         <td>
-          <button class="btnsm" id="send" onClick="validarModal()">
-		  <img src="../Usabilidad/img/send.png" alt="send" />
+          <button class="btnsm" id="personalizar" onClick="validarModal()" >
+		  <img src="../Usabilidad/img/personalizar.png" alt="send" />
 		  </button>
         </td>
       </tr>
@@ -85,27 +86,78 @@
     <!-- Modal y Overlay -->
 
   </p>
-  <div id="overlay" onclick="closeModal()"></div>
-	<div id="modal">
-	  <p class="Comic" style="font-size:30px">¡Plantillas!!!!</p>
-		<p>  <button class="butn" id="arial">
+<div id="overlay" class="hid" onclick="closeModal()" ></div>
+	
+	<div id="plantillas" class="hid">
+<table height="90%" width="auto" align="center">
+	<tbody>
+		<tr>
+			<td>
+			<button class="btnpl" id="modelo1" data-imagen="img/CartaModel1.png">
+				<img src="img/CartaModel1.png" alt="Not Loading"></button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<button class="btnpl" id="modelo2" data-imagen="img/CartaModel2.png">
+				<img src="img/CartaModel2.png" alt="Not Loading"></button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<button class="btnpl" id="modelo3" data-imagen="img/CartaModel3.png">
+				<img src="img/CartaModel3.png" alt="Not Loading"></button>
+			</td>
+		</tr>
+	</tbody>
+		
+</table>
+	</div>
+ 	
+<div id="modal" class="hid" align="center">
+	<table style="width:100%" align="center">
+		<tbody>
+			<tr>
+				<td colspan="3">
+					 <p class="Comic" style="font-size:30px;color: aliceblue">¡¡¡¡¡Personalización!!!!</p>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+				<button class="butn" id="arial">
               			<img src="../Usabilidad/img/Arial.png" alt="Boton" onClick="changeTextArial()">
             		</button> 
-		<button class="butn" id="farial">
+					&nbsp;&nbsp;&nbsp;
+				<button class="butn" id="farial">
               			<img src="../Usabilidad/img/Fantasy.png" alt="Boton" onClick="changeTextFantasy()">
             		</button>
- 
-		<button class="butn" id="ftimes">
+					&nbsp;&nbsp;&nbsp;
+				<button class="butn" id="ftimes">
               			<img src="../Usabilidad/img/times.png" alt="Boton" onClick="changeTextTimesN()">
-            		</button></p>
-
-		<div id="carta" >
-			  <p id="textoModal" class="Comic" style="font-size:30px"></p> 
-		</div>
-	 
+            		</button>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" width="100%" align="center" height="450px">
+					<div id="carta"  class="hid" >
+					  <p id="textoModal" class="Comic" style="font-size:30px"></p> 
+					</div>
+				</td>
+			</tr>
+		<tr>
+				<td style="width:45%">
+				</td>
+				<td style="width:45%">
+				</td>
+				<td style="width:10%;background-color: aliceblue">
+					<button class="btn"><img src="img/send.png" alt="not found"></button>
+				</td>
+			</tr>
+		</tbody>	
+	</table>
 </div>
 
  <script src="../Usabilidad/javascript/modal.js"></script>
-<script src="javascript/BloqueoBoton.js"></script>
+<script src="javascript/cambioPlantillas.js"></script>
 </body>
 </html>
