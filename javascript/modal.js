@@ -1,6 +1,8 @@
 //Variables de audio
 var abre_plantillas=document.getElementById("transicion_plantillas");
 var carta_vacia=document.getElementById("alerta_cartavacia");
+var audio_papa=document.getElementById("carta_papa");
+var audio_mama=document.getElementById("carta_mama");
 
 function openModal() {
   abre_plantillas.play(); 
@@ -88,3 +90,12 @@ function validarModal(){
         openModal();
     }
 }
+function cartaPapa()
+{
+	audio_papa.play();
+}
+function cartaMama()
+{
+	audio_mama.play();
+}
+

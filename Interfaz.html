@@ -19,6 +19,12 @@
 	<audio id="alerta_cartavacia">
 	<source src="audio/carta_vacia.mp3" type="audio/mpeg">
 	</audio>
+	<audio id="carta_papa">
+	<source src="audio/carta_papa.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="carta_mama">
+	<source src="audio/carta_mama.mp3" type="audio/mpeg">
+	</audio>
 <div class="container">
   <table width="80%" border="0" style="align-content: center; height: auto" align="center">
     <tbody>
@@ -29,11 +35,11 @@
 				<p class="Comic" style="font-size:25px">Voice to text, It's like magic!!!</p>
           		<p class="Comic" align="center">
             		<img src="../Usabilidad/img/For.png" width="90px" height="60px" alt="" align="left" style="margin:0 5px 30px 30px;" />
-            		<button class="btnsm" id="Dad" style="margin:0 5px 4px 3px;">
-						<img src="../Usabilidad/img/Dad.png" alt="BtnM" width="51" >
+            		<button class="btnsm" id="Dad" style="margin:0 5px 4px 3px;" onClick="cartaPapa()">
+						<img src="../Usabilidad/img/Dad.png" alt="BtnM" width="51" onClick="cartaPapa()">
 					</button>
             		&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            		<button class="btnsm" id="Mom">
+            		<button class="btnsm" id="Mom" onClick="cartaMama()">
 						<img src="../Usabilidad/img/Mom.png" alt="BtnM">
 				  </button>
           		</p>
