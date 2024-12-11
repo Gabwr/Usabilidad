@@ -20,7 +20,7 @@
 	<source src="audio/carta_vacia.mp3" type="audio/mpeg">
 	</audio>
 <div class="container">
-  <table width="60%" border="0" style="align-content: center; height: auto" align="center">
+  <table width="80%" border="0" style="align-content: center; height: auto" align="center">
     <tbody>
       <tr>
         <td width="10%">&nbsp;</td>
@@ -86,9 +86,9 @@
     <!-- Modal y Overlay -->
 
   </p>
-<div id="overlay" class="hid" onclick="closeModal()" ></div>
+<div id="overlay" class="hid" onclick="closeModal()"  ></div>
 	
-	<div id="plantillas" class="hid">
+	<div id="plantillas" >
 <table height="90%" width="auto" align="center">
 	<tbody>
 		<tr>
@@ -110,54 +110,40 @@
 			</td>
 		</tr>
 	</tbody>
-		
 </table>
 	</div>
  	
-<div id="modal" class="hid" align="center">
+
+<div id="modal" align="center">
 	<table style="width:100%" align="center">
 		<tbody>
 			<tr>
-				<td colspan="3">
-					 <p class="Comic" style="font-size:30px;color: aliceblue">¡¡¡¡¡Personalización!!!!</p>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="3">
+				<td>
 				<button class="butn" id="arial">
               			<img src="../Usabilidad/img/Arial.png" alt="Boton" onClick="changeTextArial()">
-            		</button> 
-					&nbsp;&nbsp;&nbsp;
+            		</button>
+					</td>
+			</tr>
+			<tr>
+				<td>
 				<button class="butn" id="farial">
               			<img src="../Usabilidad/img/Fantasy.png" alt="Boton" onClick="changeTextFantasy()">
             		</button>
-					&nbsp;&nbsp;&nbsp;
+				</td>
+			</tr>
+			<tr>
+			<td>
 				<button class="butn" id="ftimes">
               			<img src="../Usabilidad/img/times.png" alt="Boton" onClick="changeTextTimesN()">
             		</button>
 				</td>
-			</tr>
-			<tr>
-				<td colspan="3" width="100%" align="center" height="450px">
-					<div id="carta"  class="hid" >
-					  <p id="textoModal" class="Comic" style="font-size:30px"></p> 
-					</div>
-				</td>
-			</tr>
-		<tr>
-				<td style="width:45%">
-				</td>
-				<td style="width:45%">
-				</td>
-				<td style="width:10%;background-color: aliceblue">
-					<button class="btn"><img src="img/send.png" alt="not found"></button>
-				</td>
-			</tr>
+		</tr>
 		</tbody>	
 	</table>
 </div>
 
  <script src="../Usabilidad/javascript/modal.js"></script>
 <script src="javascript/cambioPlantillas.js"></script>
+<script src="javascript/ParaEnvio.js"></script>
 </body>
 </html>

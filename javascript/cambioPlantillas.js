@@ -1,4 +1,4 @@
-    const div = document.getElementById('carta');
+    const div = document.getElementById('salida');
     const botones = document.querySelectorAll('.btnpl');
 
     botones.forEach(boton => {
