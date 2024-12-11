@@ -24,15 +24,15 @@ function closeModal() {
 }
 
     function changeTextArial() {
-      const textoModal = document.getElementById('textoModal');
+      const textoModal = document.getElementById('salida');
       textoModal.style.fontFamily =  'Arial, sans-serif';
     }
 	function changeTextFantasy() {
-      const textoModal = document.getElementById('textoModal');
+      const textoModal = document.getElementById('salida');
       textoModal.style.fontFamily =  'Fantasy';
     }
 	function changeTextTimesN() {
-      const textoModal = document.getElementById('textoModal');
+      const textoModal = document.getElementById('salida');
       textoModal.style.fontFamily =  'Times New Roman';
     }
 //Funciones de toma de microfono
