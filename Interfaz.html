@@ -3,19 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="../Usabilidad/css/Boton.css">
-		<link rel="stylesheet" href="../Usabilidad/css/Font.css">
-		<link rel="stylesheet" href="../Usabilidad/css/BtnSmall.css">
-		<link rel="stylesheet" href="../Usabilidad/css/encima.css">
-		<link rel="stylesheet" href="../Usabilidad/css/BtnCambioFont.css">
-		<link rel="stylesheet" href="css/salida.css">
-		<link rel="stylesheet" href="../Usabilidad/css/BtnPlantillas.css">
+	<link rel="stylesheet" href="../Usabilidad/css/Boton.css">
+	<link rel="stylesheet" href="../Usabilidad/css/Font.css">
+	<link rel="stylesheet" href="../Usabilidad/css/BtnSmall.css">
+	<link rel="stylesheet" href="../Usabilidad/css/encima.css">
+	<link rel="stylesheet" href="../Usabilidad/css/BtnCambioFont.css">
+	<link rel="stylesheet" href="css/salida.css">
+	<link rel="stylesheet" href="../Usabilidad/css/BtnPlantillas.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body style="background-color:rgba(226,215,167,0.50);margin: 60px;">
 <!-- Elementos de audio -->
 	<audio id="Bienvenidos" autoplay>
 	<source src="audio/Bienvenidos.mp3" type="audio/mpeg">
-	</audio>	
+	</audio> 
 	<audio id="transicion_plantillas">
 	<source src="audio/transicion_plantillas.mp3" type="audio/mpeg">
 	</audio>
@@ -49,8 +50,8 @@
       <tr>
         <td width="10%">&nbsp;</td>
         <td width="55%"  colspan="3" align="center">
-         	 	<p >
-            		<div id="salida" style="font-family: Arial;font-size: 30px"></div>
+          	 	<p >
+            		<div id="salida" style="font-family: Arial;font-size: 30px">Este es el contenido de ejemplo para la carta.</div>
           		</p>  
         </td>
         <td width="10%">
@@ -59,7 +60,7 @@
 	<tr>
 		<td>&nbsp; </td>
 	<td colspan="3" align="center">
-          		<p class="Comic">
+          	<p class="Comic">
 					<div class="indicator" id="indicator">
 						Grabando
 		        	</div>
@@ -70,7 +71,11 @@
             		 <button class="btn" id="hear">
               			<img src="../Usabilidad/img/Escuchar.png" alt="Boton2">
             		</button>
-          		</p>
+                    &nbsp; &nbsp;&nbsp;
+                    <button class="btn" id="save">
+              			<img src="../Usabilidad/img/Guardar.png" alt="Guardar">
+            		</button>
+          	</p>
 	</td>
 		<td>&nbsp;</td>
 	</tr>
@@ -126,30 +131,44 @@
 			<tr>
 				<td>
 				<button class="butn" id="arial">
-              			<img src="../Usabilidad/img/Arial.png" alt="Boton" onClick="changeTextArial()">
+              		<img src="../Usabilidad/img/Arial.png" alt="Boton" onClick="changeTextArial()">
             		</button>
 					</td>
 			</tr>
 			<tr>
 				<td>
 				<button class="butn" id="farial">
-              			<img src="../Usabilidad/img/Fantasy.png" alt="Boton" onClick="changeTextFantasy()">
+              		<img src="../Usabilidad/img/Fantasy.png" alt="Boton" onClick="changeTextFantasy()">
             		</button>
 				</td>
 			</tr>
 			<tr>
 			<td>
 				<button class="butn" id="ftimes">
-              			<img src="../Usabilidad/img/times.png" alt="Boton" onClick="changeTextTimesN()">
+              		<img src="../Usabilidad/img/times.png" alt="Boton" onClick="changeTextTimesN()">
             		</button>
 				</td>
 		</tr>
-		</tbody>	
+		</tbody> 
 	</table>
 </div>
 
- <script src="../Usabilidad/javascript/modal.js"></script>
+<script src="../Usabilidad/javascript/modal.js"></script>
 <script src="javascript/cambioPlantillas.js"></script>
 <script src="javascript/ParaEnvio.js"></script>
+<script>
+    document.getElementById("save").addEventListener("click", function() {
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF();
+        const content = document.getElementById("salida").innerText;
+
+        pdf.setFont("Arial");
+        pdf.setFontSize(12);
+        pdf.text(content, 10, 20);
+
+        pdf.save("Carta.pdf");
+    });
+</script>
 </body>
 </html>
+
