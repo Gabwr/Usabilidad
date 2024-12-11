@@ -4,25 +4,6 @@ var carta_vacia=document.getElementById("alerta_cartavacia");
 var audio_papa=document.getElementById("carta_papa");
 var audio_mama=document.getElementById("carta_mama");
 
-function openModal() {
-  abre_plantillas.play(); 
-  document.getElementById('overlay').classList.remove('hid');
-  document.getElementById('modal').classList.remove('hid');
-  document.getElementById('carta').classList.remove('hid');
-document.getElementById('plantillas').classList.remove('hid');
-
-  const textoSalida = document.getElementById('salida').innerHTML;
-  document.getElementById('textoModal').innerHTML = textoSalida;
-}
-
-function closeModal() {
-  console.log("closeModal ejecutado");
-  document.getElementById('overlay').classList.add('hid');
-  document.getElementById('modal').classList.add('hid');
-  document.getElementById('carta').classList.add('hid');
-  document.getElementById('plantillas').classList.add('hid');
-}
-
     function changeTextArial() {
       const textoModal = document.getElementById('salida');
       textoModal.style.fontFamily =  'Arial, sans-serif';
@@ -87,7 +68,7 @@ function validarModal(){
     if (mensaje_carta == "" || mensaje_carta == "Tu texto va aqui") {
         carta_vacia.play();
     } else {
-        openModal();
+		
     }
 }
 function cartaPapa()
