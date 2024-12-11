@@ -33,18 +33,22 @@
   <table width="100%" border="0" style="align-content: center; height: auto" align="center">
     <tbody>
 		<tr>
-			<td ></td>
-		<td colspan="3" align="center"> <p class="Comic" style="font-size:25px">Voice to text, It's like magic!!!</p>
-          		<p class="Comic" align="center">
-            		<img src="../Usabilidad/img/For.png" width="90px" height="60px" alt="" align="left" style="margin:0 5px 30px 30px;" />
-            		<button class="btnsm" id="Dad" style="margin:0 5px 4px 3px;" onClick="cartaPapa()">
-						<img src="../Usabilidad/img/Dad.png" alt="BtnM" width="51" onClick="cartaPapa()">
-					</button>
-            		&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<td ><span class="Comic"><img src="../Usabilidad/img/For.png" width="90px" height="60px" alt="" align="left" style="margin:0 5px 30px 30px;" /></span></td>
+		<td colspan="3" > <p class="Comic" style="font-size:25px" align="center">Voice to text, It's like magic!!!</p>
+          		<div>
+					<p class="Comic">
+				  <button class="btnsm" id="agregar" onClick="abrirModal()">
+						<img src="../Usabilidad/img/add.png" alt="BtnM">
+				  </button>
+          		  <button class="btnsm" id="Dad"  onClick="cartaPapa()">
+					  <img src="../Usabilidad/img/Dad.png" alt="BtnM" onClick="cartaPapa()">
+				  </button>
             		<button class="btnsm" id="Mom" onClick="cartaMama()">
 						<img src="../Usabilidad/img/Mom.png" alt="BtnM">
 				  </button>
-          		</p></td>
+				  
+          		</p>
+				</div></td>
 		<td ></td>
 		</tr>
       <tr>
@@ -52,7 +56,32 @@
         <td width="55%"  colspan="3" align="center">
           	 	<p >
             		<div id="salida" style="font-family: Arial;font-size: 30px">Este es el contenido de ejemplo para la carta.</div>
-          		</p>  
+          		</p>
+		<dialog id="agregando">
+					<h2>Para agregar Destinatario</h2>
+					<p><button class="btnsm" id="hombre"  onClick="genero('hombre')">
+					  <img src="../Usabilidad/img/hombre.png" alt="BtnM" >
+				  </button>
+            		<button class="btnsm" id="mujer" onClick="genero('mujer')">
+						<img src="../Usabilidad/img/mujer.png" alt="BtnM">
+				  </button></p>
+					<form id="form1" name="form1" method="post">
+					  <p>
+					    <label for="textfield">Parentesco:</label>
+					    <input type="text" name="parentesco" id="parentesco">
+				      </p>
+					  <p>
+					    <label for="textfield2">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre">
+					  </p>
+					  <button class="btnsm" id="cerrar" type="button" onClick="cerrarModal()">
+						<img src="../Usabilidad/img/cerrar.png" alt="BtnM">
+				  	  </button>
+			          <button class="btnsm" id="aceptar" type="button" onClick="agregarDestinatario()" >
+						<img src="../Usabilidad/img/check.png" alt="BtnM">
+				  	  </button>
+            </form>
+		  </dialog>
         </td>
         <td width="10%">
 	</td>

@@ -3,6 +3,8 @@ var abre_plantillas=document.getElementById("transicion_plantillas");
 var carta_vacia=document.getElementById("alerta_cartavacia");
 var audio_papa=document.getElementById("carta_papa");
 var audio_mama=document.getElementById("carta_mama");
+const modal = document.querySelector("#agregando");
+let generoDestinatario = null;
 
     function changeTextArial() {
       const textoModal = document.getElementById('salida');
@@ -81,3 +83,52 @@ function cartaMama()
 	audio_mama.play();
 }
 
+function abrirModal(){
+	modal.showModal();
+	decir("Para agregar un destinatario selecciona si es hombre o mujer")
+}
+
+function genero(gen){
+	generoDestinatario = gen;
+}
+
+function agregarDestinatario(){	
+	const parentesco = document.getElementById('parentesco').value;
+	const nombre = document.getElementById('nombre').value;
+	
+	
+	if (!generoDestinatario) {
+        decir('No has seleccionado ningún género. Elige uno primero.');
+        return;
+    }
+
+    if (!parentesco) {
+        decir('Por favor, ingresa un parentesco antes de enviar.');
+        return;
+    }
+	
+	if (!nombre) {
+        decir('Por favor, ingresa un nombre antes de enviar.');
+        return;
+    }
+	
+
+	const idBotonNuevo = `${nombre}-${parentesco}`;
+	const nuevoBoton = document.createElement('button');
+	nuevoBoton.className = 'btnsm';
+	nuevoBoton.id = idBoton;
+	decir("hasta aqui llega");
+	if(generoDestinatario == "hombre"){
+		nuevoBoton.innerHTML = `<img src="../Usabilidad/img/hombre.png" alt="BtnM">`;
+	}
+	if(generoDestinatario == "mujer"){
+		nuevoBoton.innerHTML = `<img src="../Usabilidad/img/mujer.png" alt="BtnM">`;
+	}
+	document.getElementById("contenedorDestinatarios").appendChild(nuevoBoton);
+	decir(`Destinatario agregado: ${idBoton}`);
+	cerrarModal();
+}
+
+function cerrarModal(){
+	modal.close();
+}
