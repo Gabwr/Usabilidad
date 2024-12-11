@@ -26,13 +26,11 @@
 	<source src="audio/carta_mama.mp3" type="audio/mpeg">
 	</audio>
 <div class="container">
-  <table width="80%" border="0" style="align-content: center; height: auto" align="center">
+  <table width="100%" border="0" style="align-content: center; height: auto" align="center">
     <tbody>
-      <tr>
-        <td width="10%">&nbsp;</td>
-        <td width="55%" rowspan="5" align="center">
-			
-				<p class="Comic" style="font-size:25px">Voice to text, It's like magic!!!</p>
+		<tr>
+			<td ></td>
+		<td colspan="3" align="center"> <p class="Comic" style="font-size:25px">Voice to text, It's like magic!!!</p>
           		<p class="Comic" align="center">
             		<img src="../Usabilidad/img/For.png" width="90px" height="60px" alt="" align="left" style="margin:0 5px 30px 30px;" />
             		<button class="btnsm" id="Dad" style="margin:0 5px 4px 3px;" onClick="cartaPapa()">
@@ -42,16 +40,26 @@
             		<button class="btnsm" id="Mom" onClick="cartaMama()">
 						<img src="../Usabilidad/img/Mom.png" alt="BtnM">
 				  </button>
-          		</p>
+          		</p></td>
+		<td ></td>
+		</tr>
+      <tr>
+        <td width="10%">&nbsp;</td>
+        <td width="55%"  colspan="3" align="center">
          	 	<p >
             		<div id="salida" style="font-family: Arial;font-size: 30px"></div>
-          		</p>
-		        <p>
-					<div class="indicator">
+          		</p>  
+        </td>
+        <td width="10%">
+	</td>
+      </tr>
+	<tr>
+		<td>&nbsp; </td>
+	<td colspan="3" align="center">
+          		<p class="Comic">
+					<div class="indicator" id="indicator">
 						Grabando
 		        	</div>
-				</p>
-          		<p class="Comic">
             		<button class="btn" id="mic">
               			<img src="../Usabilidad/img/Microfono.png" alt="Boton">
             		</button>
@@ -60,25 +68,15 @@
               			<img src="../Usabilidad/img/Escuchar.png" alt="Boton2">
             		</button>
           		</p>
-			          
-        </td>
-        <td width="10%">&nbsp;</td>
-      </tr>
+	</td>
+		<td>&nbsp;</td>
+	</tr>
       <tr>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-      </tr>
-      <tr>
         <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>
+		<td>&nbsp;</td>
+        <td align="center" style="background-color: antiquewhite">
           <button class="btnsm" id="personalizar" onClick="validarModal()" >
 		  <img src="../Usabilidad/img/send.png" alt="send" />
 		  </button>
@@ -92,7 +90,6 @@
     <!-- Modal y Overlay -->
 
   </p>
-<div id="overlay" class="hid" onclick="closeModal()"  ></div>
 	
 	<div id="plantillas" >
 <table height="90%" width="auto" align="center">

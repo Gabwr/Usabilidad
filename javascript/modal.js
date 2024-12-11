@@ -48,6 +48,7 @@ recognition.onresult = function (event) {
 
 botonMic.addEventListener("click", function(){
 	recognition.start();
+	 document.getElementById('indicator').classList.remove('hid');
 });
 
 hablar.addEventListener("click", ()=>{

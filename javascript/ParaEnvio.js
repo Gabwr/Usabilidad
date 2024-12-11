@@ -3,7 +3,7 @@
 
 	script.onload = () => {
 document.getElementById("enviar").addEventListener("click", async () => {
-  const div = document.getElementById("carta");
+  const div = document.getElementById("salida");
   //div a canva
   const canvas = await html2canvas(div);
   canvas.toBlob(async (blob) => {
