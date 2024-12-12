@@ -96,6 +96,7 @@ function abrirModal(){
 
 function genero(gen){
 	generoDestinatario = gen;
+	decir(gen);
 }
 
 function agregarDestinatario(){	

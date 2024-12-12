@@ -77,6 +77,31 @@
         <td width="10%">&nbsp;</td>
         <td width="55%"  colspan="3" align="center">
             		<div id="salida" ></div>
+			<dialog id="agregando">
+					<h2>Para agregar Destinatario</h2>
+					<p><button class="btnsm" id="hombre"  onClick="genero('hombre')">
+					  <img src="../Usabilidad/img/hombre.png" alt="BtnM" >
+				  </button>
+            		<button class="btnsm" id="mujer" onClick="genero('mujer')">
+						<img src="../Usabilidad/img/mujer.png" alt="BtnM">
+				  </button></p>
+					<form id="form1" name="form1" method="post">
+					  <p>
+					    <label for="textfield">Parentesco:</label>
+					    <input type="text" name="parentesco" id="parentesco">
+				      </p>
+					  <p>
+					    <label for="textfield2">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre">
+					  </p>
+					  <button class="btnsm" id="cerrar" type="button" onClick="cerrarModal()">
+						<img src="../Usabilidad/img/cerrar.png" alt="BtnM">
+				  	  </button>
+			          <button class="btnsm" id="aceptar" type="button" onClick="agregarDestinatario()" >
+						<img src="../Usabilidad/img/check.png" alt="BtnM">
+				  	  </button>
+            </form>
+		  </dialog>
         </td>
         <td width="10%">
 	</td>
