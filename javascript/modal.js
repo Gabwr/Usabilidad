@@ -5,6 +5,7 @@ var audio_papa=document.getElementById("carta_papa");
 var audio_mama=document.getElementById("carta_mama");
 const modal = document.querySelector("#agregando");
 let generoDestinatario = null;
+let contDestinatarios = 0;
 
     function changeTextArial() {
       const textoModal = document.getElementById('salida');
@@ -111,26 +112,12 @@ function agregarDestinatario(){
         decir('Por favor, ingresa un nombre antes de enviar.');
         return;
     }
-	
 
-	const idBotonNuevo = `${nombre}-${parentesco}`;
-	const nuevoBoton = document.createElement('button');
-	nuevoBoton.className = 'btnsm';
-
-	nuevoBoton.setAttribute("name",idBotonNuevo);
-	nuevoBoton.setAttribute("id","extra");
+	contDestinatarios++;
+	decir(contDestinatarios.toString());
 	
+	document.getElementById(contDestinatarios.toString()).style.visibility = "visible";
 	
-	if(generoDestinatario === "hombre"){
-		nuevoBoton.innerHTML = `<img src="../img/hombre.png" alt="BtnM">`;
-	}
-	if(generoDestinatario === "mujer"){
-		nuevoBoton.innerHTML = `<img src="../img/mujer.png" alt="BtnM">`;
-	}
-
-	document.getElementById("contenedorDestinatarios").appendChild(nuevoBoton);
-	
-	decir(`Destinatario agregado: ${idBoton}`);
 	cerrarModal();
 }
 
