@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="../Usabilidad/css/BtnPlantillas.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
-<body style="background-color:rgba(226,215,167,0.50);margin: 60px;">
+<body style="background-color:rgba(226,215,167,0.50);margin: 60px;display: inline">
 <!-- Elementos de audio -->
 	<audio id="Bienvenidos" autoplay>
 	<source src="audio/Bienvenidos.mp3" type="audio/mpeg">
@@ -41,13 +41,16 @@
 	<audio id="c_borrar">
 	<source src="audio/conf_borrar.mp3" type="audio/mpeg">
 	</audio>
+<div class="total">
 <div class="container">
   <table width="100%" border="0" style="align-content: center; height: auto" align="center">
     <tbody>
 		<tr>
-			<td ><span class="Comic"><img src="../Usabilidad/img/For.png" width="90px" height="60px" alt="" align="left" style="margin:0 5px 30px 30px;" /></span></td>
+			<td ><p class="Comic">&nbsp;</p>
+		    <p class="Comic">&nbsp;</p>
+		    <p class="Comic"><img src="../Usabilidad/img/For.png" width="90px" height="60px" alt="" align="left" style="margin:0 5px 30px 30px;" /></p></td>
 		<td colspan="3" > <p class="Comic" style="font-size:25px" align="center">Voice to text, It's like magic!!!</p>
-          		<div id="contenedorDestinatarios">
+          		<div id="contenedorDestinatarios" class="destinatarios">
 					<p class="Comic">
 				  <button class="btnsm" id="agregar" onClick="abrirModal()">
 						<img src="../Usabilidad/img/add.png" alt="BtnM">
@@ -58,24 +61,24 @@
             		<button class="btnsm" id="Mom" onClick="cartaMama()">
 						<img src="../Usabilidad/img/Mom.png" alt="BtnM">
 				  </button>
-				<button class="btnsm" id="1" onClick="decir(name)" style="visibility: hidden" >
+				<button class="btnsm" id="1" onClick="decir('la carta se enciará a ' + name)" style="visibility: hidden" >
 						<img id="img1" src="../Usabilidad/img/Mom.png" alt="BtnM">
 				  </button>
-						<button class="btnsm" id="2" onClick="decir(name)" style="visibility: hidden" >
+						<button class="btnsm" id="2" onClick="decir('la carta se enviará a ' + name)" style="visibility: hidden" >
 						<img id="img2" src="../Usabilidad/img/Mom.png" alt="BtnM">
 				  </button>
-						<button class="btnsm" id="3" onClick="decir(name)" style="visibility: hidden" >
+						<button class="btnsm" id="3" onClick="decir('la carta se enviará a ' + name)" style="visibility: hidden" >
 						<img id="img3" src="../Usabilidad/img/Mom.png" alt="BtnM">
 				  </button>
-				  <button class="btnsm" id="4" onClick="decir(name)" style="visibility: hidden">
+				  <button class="btnsm" id="4" onClick="decir('la carta se enviará a ' + name)" style="visibility: hidden">
 					  <img id="img4" src="../Usabilidad/img/Mom.png" alt="BtnM"></button>
 					</p>
 				</div></td>
 		<td ></td>
 		</tr>
       <tr>
-        <td width="10%">&nbsp;</td>
-        <td width="55%"  colspan="3" align="center">
+        <td width="19%">&nbsp;</td>
+        <td  colspan="3" align="center">
             		<div id="salida" ></div>
 			<dialog id="agregando">
 					<h2>Para agregar Destinatario</h2>
@@ -103,8 +106,8 @@
             </form>
 		  </dialog>
         </td>
-        <td width="10%">
-	</td>
+        <td width="18%">
+        </td>
       </tr>
 	<tr>
 	<td colspan="4" align="center">
@@ -124,10 +127,8 @@
 		<td>&nbsp;</td>
 	<td colspan="3" align="center">
           	<p class="Comic">
-					<div class="indicator" id="indicator">
-						Grabando
-		        	</div>
-            		<button class="btn" id="mic">
+				<div class="contenedorBotones">
+				<button class="btn" id="mic">
               			<img src="../Usabilidad/img/Microfono.png" alt="Boton">
             		</button>
             		 &nbsp; &nbsp;&nbsp;
@@ -139,15 +140,17 @@
               			<img src="../Usabilidad/img/Guardar.png" alt="Guardar">
             		</button>
 					<button class="btn" id="erase"></button>
+				</div>
+					
           	</p>
 	 </td>
 		<td><button class="btn" onClick="abrirBorrado()"><img src="../Usabilidad/img/Borrar.png" alt="Limpiar"></button></td>
 	</tr>
       <tr>
         <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-		<td>&nbsp;</td>
+        <td width="22%">&nbsp;</td>
+        <td width="20%">&nbsp;</td>
+		<td width="21%">&nbsp;</td>
         <td align="center" style="background-color: antiquewhite">
           <button class="btnsm" id="enviar" onClick="validarModal()" >
 		  <img src="../Usabilidad/img/send.png" alt="send" />
@@ -163,7 +166,7 @@
 
   </p>
 	
-	<div id="plantillas" >
+	<div id="plantillas" style="width: 300px; height: 700px;" >
 <table height="90%" width="auto" align="center">
 	<tbody>
 		<tr>
@@ -187,8 +190,6 @@
 	</tbody>
 </table>
 	</div>
- 	
-
 <div id="modal" align="center">
 	<table style="width:100%" align="center">
 		<tbody>
@@ -215,6 +216,7 @@
 		</tr>
 		</tbody> 
 	</table>
+</div>
 </div>
 
 <script src="../Usabilidad/javascript/modal.js"></script>
