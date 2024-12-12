@@ -116,7 +116,13 @@ function agregarDestinatario(){
 	contDestinatarios++;
 	decir(contDestinatarios.toString());
 	
-	document.getElementById(contDestinatarios.toString()).style.visibility = "visible";
+	nuevoDest = document.getElementById(contDestinatarios.toString());
+	nuevoDesImg = document.getElementById("img1");
+	nuevoDest.style.visibility = "visible";
+	if(generoDestinatario === "hombre"){
+		nuevoDesImg.setAttribute("src", "../Usabilidad/img/hombre.png");
+	}
+	
 	
 	cerrarModal();
 }
