@@ -29,6 +29,18 @@
 	<audio id="carta_mama">
 	<source src="audio/carta_mama.mp3" type="audio/mpeg">
 	</audio>
+	<audio id="p_borrar">
+	<source src="audio/pregunta_borrar.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="si_borrar">
+	<source src="audio/si_borrar.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="no_borrar">
+	<source src="audio/no_borrar.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="c_borrar">
+	<source src="audio/conf_borrar.mp3" type="audio/mpeg">
+	</audio>
 <div class="container">
   <table width="100%" border="0" style="align-content: center; height: auto" align="center">
     <tbody>
@@ -70,7 +82,21 @@
 	</td>
       </tr>
 	<tr>
-		<td>&nbsp; </td>
+	<td colspan="4" align="center">
+		<dialog id="borrado">
+		<p>Seguro que quieres borrar el mensaje de la carta?</p>
+		<br>
+		<button class="btnsm" id="bt_no_borrar" type="button" onClick="noBorrar()" onMouseOver="p_no_borrar()">
+						<img src="../Usabilidad/img/cerrar.png" alt="BtnM">
+				  	  </button>
+			          <button class="btnsm" id="borrar" type="button" onClick="borrar()" onMouseOver="p_si_borrar()">
+						<img src="../Usabilidad/img/check.png" alt="BtnM">
+				  	  </button>
+		</dialog>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
 	<td colspan="3" align="center">
           	<p class="Comic">
 					<div class="indicator" id="indicator">
@@ -87,9 +113,10 @@
                     <button class="btn" id="save">
               			<img src="../Usabilidad/img/Guardar.png" alt="Guardar">
             		</button>
+					<button class="btn" id="erase"></button>
           	</p>
-	</td>
-		<td>&nbsp;</td>
+	 </td>
+		<td><button class="btn" onClick="abrirBorrado()"><img src="../Usabilidad/img/Borrar.png" alt="Limpiar"></button></td>
 	</tr>
       <tr>
         <td>&nbsp;</td>

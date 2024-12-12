@@ -4,6 +4,7 @@ var carta_vacia=document.getElementById("alerta_cartavacia");
 var audio_papa=document.getElementById("carta_papa");
 var audio_mama=document.getElementById("carta_mama");
 const modal = document.querySelector("#agregando");
+
 let generoDestinatario = null;
 let contDestinatarios = 0;
 
@@ -135,6 +136,41 @@ function agregarDestinatario(){
 }
 
 
+
 function cerrarModal(){
 	modal.close();
+}
+
+
+//Funciones de borrado
+//Ventana emergente
+var dialogo_borrado=document.querySelector("#borrado");
+//Audios
+var p_borrar=document.getElementById("p_borrar");
+var si_borrar=document.getElementById("si_borrar");
+var no_borrar=document.getElementById("no_borrar");
+var conf_borrar=document.getElementById("c_borrar");
+function abrirBorrado()
+{
+	dialogo_borrado.showModal();
+	p_borrar.play();
+}
+function p_si_borrar()
+{
+	si_borrar.play();
+}
+function p_no_borrar()
+{
+	no_borrar.play();
+}
+function borrar()
+{
+	var mensaje_carta = document.getElementById("salida");
+	dialogo_borrado.close();
+	mensaje_carta.innerHTML="";
+	conf_borrar.play();
+}
+function noBorrar()
+{
+	dialogo_borrado.close();
 }
