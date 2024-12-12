@@ -116,15 +116,20 @@ function agregarDestinatario(){
 	const idBotonNuevo = `${nombre}-${parentesco}`;
 	const nuevoBoton = document.createElement('button');
 	nuevoBoton.className = 'btnsm';
-	nuevoBoton.id = idBoton;
-	decir("hasta aqui llega");
-	if(generoDestinatario == "hombre"){
-		nuevoBoton.innerHTML = `<img src="../Usabilidad/img/hombre.png" alt="BtnM">`;
+
+	nuevoBoton.setAttribute("name",idBotonNuevo);
+	nuevoBoton.setAttribute("id","extra");
+	
+	
+	if(generoDestinatario === "hombre"){
+		nuevoBoton.innerHTML = `<img src="../img/hombre.png" alt="BtnM">`;
 	}
-	if(generoDestinatario == "mujer"){
-		nuevoBoton.innerHTML = `<img src="../Usabilidad/img/mujer.png" alt="BtnM">`;
+	if(generoDestinatario === "mujer"){
+		nuevoBoton.innerHTML = `<img src="../img/mujer.png" alt="BtnM">`;
 	}
+
 	document.getElementById("contenedorDestinatarios").appendChild(nuevoBoton);
+	
 	decir(`Destinatario agregado: ${idBoton}`);
 	cerrarModal();
 }
