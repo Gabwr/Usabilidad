@@ -19,25 +19,21 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// Configuración de Nodemailer (reemplaza con tus datos de SMTP)
 const transporter = nodemailer.createTransport({
-  service: "gmail", // Usa el servicio de tu preferencia (Gmail, SendGrid, etc.)
+  service: "gmail", 
   auth: {
-    user: "gamalop0104@gmail.com", // Tu correo electrónico
-    pass: "gabrielporquesi0104.", // Tu contraseña o contraseñas de aplicación
+    user: "gamalop0104@gmail.com", 
+    pass: "gabrielporquesi0104.", 
   },
 });
 
-// Ruta para manejar la subida de la imagen y enviarla por correo
 app.post("/Usabilidad/uploads", upload.single("image"), async (req, res) => {
   if (!req.file) {
     return res.status(400).json({ error: "No se recibió ningún archivo" });
   }
-
   const filePath = path.join(__dirname, "uploads", req.file.filename);
   const fileName = req.file.filename;
 
-  // Configuración del correo electrónico
   const mailOptions = {
     from: "gamalop0104@gmail.com", // Tu correo
     to: "gamalop0104@gmail.com", // Correo del destinatario

@@ -2,7 +2,7 @@
 	script.src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";
 
 	script.onload = () => {
-document.getElementById("enviar").addEventListener("click", async () => {
+	document.getElementById("enviar").addEventListener("click", async () => {
   const div = document.getElementById("salida");
   //div a canva
   const canvas = await html2canvas(div);
@@ -11,9 +11,6 @@ document.getElementById("enviar").addEventListener("click", async () => {
     const fileName = "carta.png";
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
-    a.href = url;
-    a.download = fileName;
-    a.click();
 
     // Enviar la imagen al backend para enviarla por correo
     const formData = new FormData();
