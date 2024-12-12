@@ -117,15 +117,19 @@ function agregarDestinatario(){
 	decir(contDestinatarios.toString());
 	
 	nuevoDest = document.getElementById(contDestinatarios.toString());
-	nuevoDesImg = document.getElementById("img1");
+	nuevoDesImg = document.getElementById("img"+contDestinatarios.toString());
 	nuevoDest.style.visibility = "visible";
+	nuevoDest.setAttribute("name", parentesco+" "+nombre);
 	if(generoDestinatario === "hombre"){
 		nuevoDesImg.setAttribute("src", "../Usabilidad/img/hombre.png");
 	}
-	
+	if(generoDestinatario === "mujer"){
+		nuevoDesImg.setAttribute("src", "../Usabilidad/img/mujer.png");
+	}
 	
 	cerrarModal();
 }
+
 
 function cerrarModal(){
 	modal.close();
