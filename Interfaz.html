@@ -33,18 +33,32 @@
   <table width="100%" border="0" style="align-content: center; height: auto" align="center">
     <tbody>
 		<tr>
-			<td ></td>
-		<td colspan="3" align="center"> <p class="Comic" style="font-size:25px">Voice to text, It's like magic!!!</p>
-          		<p class="Comic" align="center">
-            		<img src="../Usabilidad/img/For.png" width="90px" height="60px" alt="" align="left" style="margin:0 5px 30px 30px;" />
-            		<button class="btnsm" id="Dad" style="margin:0 5px 4px 3px;" onClick="cartaPapa()">
-						<img src="../Usabilidad/img/Dad.png" alt="BtnM" width="51" onClick="cartaPapa()">
-					</button>
-            		&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<td ><span class="Comic"><img src="../Usabilidad/img/For.png" width="90px" height="60px" alt="" align="left" style="margin:0 5px 30px 30px;" /></span></td>
+		<td colspan="3" > <p class="Comic" style="font-size:25px" align="center">Voice to text, It's like magic!!!</p>
+          		<div id="contenedorDestinatarios">
+					<p class="Comic">
+				  <button class="btnsm" id="agregar" onClick="abrirModal()">
+						<img src="../Usabilidad/img/add.png" alt="BtnM">
+				  </button>
+          		  <button class="btnsm" id="Dad"  onClick="cartaPapa()">
+					  <img src="../Usabilidad/img/Dad.png" alt="BtnM" onClick="cartaPapa()">
+				  </button>
             		<button class="btnsm" id="Mom" onClick="cartaMama()">
 						<img src="../Usabilidad/img/Mom.png" alt="BtnM">
 				  </button>
-          		</p></td>
+				<button class="btnsm" id="1" onClick="decir(name)" style="visibility: hidden" >
+						<img id="img1" src="../Usabilidad/img/Mom.png" alt="BtnM">
+				  </button>
+						<button class="btnsm" id="2" onClick="decir(name)" style="visibility: hidden" >
+						<img id="img2" src="../Usabilidad/img/Mom.png" alt="BtnM">
+				  </button>
+						<button class="btnsm" id="3" onClick="decir(name)" style="visibility: hidden" >
+						<img id="img3" src="../Usabilidad/img/Mom.png" alt="BtnM">
+				  </button>
+				  <button class="btnsm" id="4" onClick="decir(name)" style="visibility: hidden">
+					  <img id="img4" src="../Usabilidad/img/Mom.png" alt="BtnM"></button>
+					</p>
+				</div></td>
 		<td ></td>
 		</tr>
       <tr>
