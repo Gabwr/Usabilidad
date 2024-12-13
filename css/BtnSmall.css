@@ -7,10 +7,10 @@
       cursor: pointer;
       outline: none;
       transition: transform 0.3s ease, filter 0.3s ease;
-		margin:3px;
+		margin:5px 3px 0px;
     }
     .btnsm img {
-      width: 60px;
+      width: 100px;
       border-radius: 3px;
       transition: transform 0.3s ease, filter 0.3s ease;
     }
