@@ -5,25 +5,28 @@
   	top: 10%;
   	right: 1%;
 	width: 300px;
-	height: 200px;
-	background-color: antiquewhite;
+	height: 250px;
+	background-color: rgb(20, 20, 20);
   padding: 30px 20px ;
+  border-radius: 6px;
 }
 .plantillasSlider{
   display: flex;
 	aspect-ratio:16/9;
   overflow-y: auto;
-  margin: auto;
+  margin: 35px auto;
   scrollbar-width: none;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
+  box-shadow: 0 0.2rem 1.5rem 0.25rem hsla(0, 0%, 100%, 0.35);
+  border-radius: 3px;;
 }
 
 .plantillasSlider img {
   flex:1 0 100%;
   scroll-snap-align: start;
   object-fit: cover;
+  border-radius: 3px;
 }
 
 
