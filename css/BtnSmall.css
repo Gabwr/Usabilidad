@@ -7,14 +7,31 @@
       cursor: pointer;
       outline: none;
       transition: transform 0.3s ease, filter 0.3s ease;
-		margin:5px 3px 0px;
+		  margin:5px 3px 0px;
     }
-    .btnsm img {
+
+    .btnEnviar{
+      border: none;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+      outline: none;
+      transition: transform 0.3s ease, filter 0.3s ease;
+		  margin:5px 3px 0px;
+    }
+
+    .btnsm img{
       width: 60px;
       border-radius: 3px;
       transition: transform 0.3s ease, filter 0.3s ease;
     }
-    .btnsm:hover img {
+    .btnEnviar img{
+      width: 80px;
+      border-radius: 3px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .btnsm:hover img, .btnEnviar:hover img {
       transform: scale(1.2);
       filter: brightness(1.2);
 	}
