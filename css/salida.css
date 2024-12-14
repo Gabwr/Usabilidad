@@ -26,7 +26,7 @@
   box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0.8); 
 } 
 .container{
-	background-color:rgba(67,244,208,90%);
+	background-color:rgba(109, 209, 255, 0.9);
 	border-radius:10px;
 	border:1px solid linear-gradient(115deg,rgba(36,32,56,50%),rgba(32,54,24,50%));
 	width:75%;
