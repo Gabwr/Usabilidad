@@ -3,13 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../Usabilidad/css/Boton.css">
-	<link rel="stylesheet" href="../Usabilidad/css/Font.css">
-	<link rel="stylesheet" href="../Usabilidad/css/BtnSmall.css">
-	<link rel="stylesheet" href="../Usabilidad/css/encima.css">
-	<link rel="stylesheet" href="../Usabilidad/css/BtnCambioFont.css">
+	<link rel="stylesheet" href="css/Boton.css">
+	<link rel="stylesheet" href="css/Font.css">
+	<link rel="stylesheet" href="css/BtnSmall.css">
+	<link rel="stylesheet" href="css/encima.css">
+	<link rel="stylesheet" href="css/BtnCambioFont.css">
 	<link rel="stylesheet" href="css/salida.css">
-	<link rel="stylesheet" href="../Usabilidad/css/BtnPlantillas.css">
+	<link rel="stylesheet" href="css/BtnPlantillas.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body style="background-color:rgba(226,215,167,0.50);margin: 60px;display: inline">
@@ -48,30 +48,30 @@
 		<tr>
 			<td ><p class="Comic">&nbsp;</p>
 		    <p class="Comic">&nbsp;</p>
-		    <p class="Comic"><img src="../Usabilidad/img/For.png" width="90px" height="60px" alt="" align="left" style="margin:0 5px 30px 30px;" /></p></td>
+		    <p class="Comic"><img src="img/For.png" width="90px" height="60px" alt="" align="left" style="margin:0 5px 30px 30px;" /></p></td>
 		<td colspan="3" > <p class="Comic" style="font-size:25px" align="center">Voice to text, It's like magic!!!</p>
           		<div id="contenedorDestinatarios" class="destinatarios">
 					<p class="Comic">
 				  <button class="btnsm" id="agregar" onClick="abrirModal()">
-						<img src="../Usabilidad/img/add.png" alt="BtnM">
+						<img src="img/add.png" alt="BtnM">
 				  </button>
           		  <button class="btnsm" id="Dad"  onClick="cartaPapa()">
-					  <img src="../Usabilidad/img/Dad.png" alt="BtnM" onClick="cartaPapa()">
+					  <img src="img/Dad.png" alt="BtnM" onClick="cartaPapa()">
 				  </button>
             		<button class="btnsm" id="Mom" onClick="cartaMama()">
-						<img src="../Usabilidad/img/Mom.png" alt="BtnM">
+						<img src="img/Mom.png" alt="BtnM">
 				  </button>
 				<button class="btnsm" id="1" onClick="decir('la carta se enciará a ' + name)" style="visibility: hidden" >
-						<img id="img1" src="../Usabilidad/img/Mom.png" alt="BtnM">
+						<img id="img1" src="img/Mom.png" alt="BtnM">
 				  </button>
 						<button class="btnsm" id="2" onClick="decir('la carta se enviará a ' + name)" style="visibility: hidden" >
-						<img id="img2" src="../Usabilidad/img/Mom.png" alt="BtnM">
+						<img id="img2" src="img/Mom.png" alt="BtnM">
 				  </button>
 						<button class="btnsm" id="3" onClick="decir('la carta se enviará a ' + name)" style="visibility: hidden" >
-						<img id="img3" src="../Usabilidad/img/Mom.png" alt="BtnM">
+						<img id="img3" src="img/Mom.png" alt="BtnM">
 				  </button>
 				  <button class="btnsm" id="4" onClick="decir('la carta se enviará a ' + name)" style="visibility: hidden">
-					  <img id="img4" src="../Usabilidad/img/Mom.png" alt="BtnM"></button>
+					  <img id="img4" src="img/Mom.png" alt="BtnM"></button>
 					</p>
 				</div></td>
 		<td ></td>
@@ -83,10 +83,10 @@
 			<dialog id="agregando">
 					<h2>Para agregar Destinatario</h2>
 					<p><button class="btnsm" id="hombre"  onClick="genero('hombre')">
-					  <img src="../Usabilidad/img/hombre.png" alt="BtnM" >
+					  <img src="img/hombre.png" alt="BtnM" >
 				  </button>
             		<button class="btnsm" id="mujer" onClick="genero('mujer')">
-						<img src="../Usabilidad/img/mujer.png" alt="BtnM">
+						<img src="img/mujer.png" alt="BtnM">
 				  </button></p>
 					<form id="form1" name="form1" method="post">
 					  <p>
@@ -98,10 +98,10 @@
                         <input type="text" name="nombre" id="nombre">
 					  </p>
 					  <button class="btnsm" id="cerrar" type="button" onClick="cerrarModal()">
-						<img src="../Usabilidad/img/cerrar.png" alt="BtnM">
+						<img src="img/cerrar.png" alt="BtnM">
 				  	  </button>
 			          <button class="btnsm" id="aceptar" type="button" onClick="agregarDestinatario()" >
-						<img src="../Usabilidad/img/check.png" alt="BtnM">
+						<img src="img/check.png" alt="BtnM">
 				  	  </button>
             </form>
 		  </dialog>
@@ -115,10 +115,10 @@
 		<p>Seguro que quieres borrar el mensaje de la carta?</p>
 		<br>
 		<button class="btnsm" id="bt_no_borrar" type="button" onClick="noBorrar()" onMouseOver="p_no_borrar()">
-						<img src="../Usabilidad/img/cerrar.png" alt="BtnM">
+						<img src="img/cerrar.png" alt="BtnM">
 				  	  </button>
 			          <button class="btnsm" id="borrar" type="button" onClick="borrar()" onMouseOver="p_si_borrar()">
-						<img src="../Usabilidad/img/check.png" alt="BtnM">
+						<img src="img/check.png" alt="BtnM">
 				  	  </button>
 		</dialog>
 		</td>
@@ -129,23 +129,25 @@
           	<p class="Comic">
 				<div class="contenedorBotones">
 				<button class="btn" id="mic">
-              			<img src="../Usabilidad/img/Microfono.png" alt="Boton">
+              			<img src="img/Microfono.png" alt="Boton">
             		</button>
 
             		 <button class="btn" id="hear">
-              			<img src="../Usabilidad/img/Escuchar.png" alt="Boton2">
+              			<img src="img/Escuchar.png" alt="Boton2">
             		</button>
 
                     <button class="btn" id="save">
-              			<img src="../Usabilidad/img/Guardar.png" alt="Guardar">
+              			<img src="img/Guardar.png" alt="Guardar">
             		</button>
-					<button class="btn" onClick="abrirBorrado()"><img src="../Usabilidad/img/Borrar.png" alt="Limpiar"></button>
+					<button class="btn" onClick="abrirBorrado()">
+						<img src="img/Borrar.png" alt="Limpiar">
+					</button>
 				</div>
 					
           	</p>
 	 </td>
 		<td align="center"><button class="btnsm" id="enviar" onClick="validarModal()" style="width: 80px;" >
-		  		<img src="../Usabilidad/img/send.png" alt="send"/>
+		  		<img src="img/send.png" alt="send"/>
 		  </button></td>
 	</tr>
       <tr>
@@ -161,29 +163,22 @@
   </table>
 </div>
   	
-	<div id="plantillas" style="width: 300px; height: 700px;" >
-<table height="90%" width="auto" align="center">
-	<tbody>
-		<tr>
-			<td>
-			<button class="btnpl" id="modelo1" data-imagen="img/CartaModel1.png">
-				<img src="img/CartaModel1.png" alt="Not Loading"></button>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<button class="btnpl" id="modelo2" data-imagen="img/CartaModel2.png">
-				<img src="img/CartaModel2.png" alt="Not Loading"></button>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<button class="btnpl" id="modelo3" data-imagen="img/CartaModel3.png">
-				<img src="img/CartaModel3.png" alt="Not Loading"></button>
-			</td>
-		</tr>
-	</tbody>
-</table>
+<div class="plantillasContainer" >
+	<div class="plantillasSlider">
+	<p>
+	<button class="btnpl" id="modelo1" data-imagen="img/CartaModel1.png">
+		<img src="img/CartaModel1.png" alt="Not Loading">
+	</button>
+	<br>
+	<button class="btnpl" id="modelo2" data-imagen="img/CartaModel2.png">
+		<img src="img/CartaModel2.png" alt="Not Loading">
+	</button>
+	<br>
+	<button class="btnpl" id="modelo3" data-imagen="img/CartaModel3.png">
+		<img src="img/CartaModel3.png" alt="Not Loading">
+	</button>
+	</p>
+	</div>
 	</div>
 <div id="modal" align="center">
 	<table style="width:100%" align="center">
@@ -191,21 +186,21 @@
 			<tr>
 				<td>
 				<button class="butn" id="arial">
-              		<img src="../Usabilidad/img/Arial.png" alt="Boton" onClick="changeTextArial()">
+              		<img src="img/Arial.png" alt="Boton" onClick="changeTextArial()">
             		</button>
 					</td>
 			</tr>
 			<tr>
 				<td>
 				<button class="butn" id="farial">
-              		<img src="../Usabilidad/img/Fantasy.png" alt="Boton" onClick="changeTextFantasy()">
+              		<img src="img/Fantasy.png" alt="Boton" onClick="changeTextFantasy()">
             		</button>
 				</td>
 			</tr>
 			<tr>
 			<td>
 				<button class="butn" id="ftimes">
-              		<img src="../Usabilidad/img/times.png" alt="Boton" onClick="changeTextTimesN()">
+              		<img src="img/times.png" alt="Boton" onClick="changeTextTimesN()">
             		</button>
 				</td>
 		</tr>
@@ -214,7 +209,7 @@
 </div>
 </div>
 
-<script src="../Usabilidad/javascript/modal.js"></script>
+<script src="javascript/modal.js"></script>
 <script src="javascript/cambioPlantillas.js"></script>
 <script src="javascript/ParaEnvio.js"></script>
 <script>

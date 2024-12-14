@@ -19,6 +19,8 @@
 	transition: all 2s ease;
 	border-radius:5px;
 }
+
+
 .brillo{
   transform: scale(1.1); 
   box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0.8); 
@@ -45,9 +47,6 @@ body{
 	background-size:cover;
 }
 
-.total {
-
-}
 
 .destinatarios {
 	width: 100%;
